@@ -38,9 +38,13 @@ function promptUser() {
 
     },
     {
-      type: "choice",
+      type: "choices",
       name: "licence",
-      message: "What licence is used?"
+      message: "What licence is used?"[
+      "MIT License",
+      "Apache License",
+      "GPL License",
+      "Other License"]
       
     },
     {
@@ -98,7 +102,7 @@ promptUser()
   .then(function(answers) {
     const txt = generateTXT(answers);
 
-    return writeFileAsync("readme.txt", txt);
+    return writeFileAsync("${answers.title} + readme.txt", txt);
   })
   .then(function() {
     console.log("Successfully wrote to readme.txt");
@@ -106,11 +110,3 @@ promptUser()
   .catch(function(err) {
     console.log(err);
   });
-
-
-
-// async function init() {
-//   console.log("hi")}
-  // try {
-  //   const answers = await promptUser();
-  // }
