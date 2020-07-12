@@ -38,15 +38,14 @@ function promptUser() {
 
     },
     {
-      type: "options",
-      name: "licence",
+      type: "checkbox",
       message: "What licence is used?",
-      
-      value: "MIT License",
-      value: "Apache License",
-      value: "GPL License",
-      value: "Other License",
-    
+      name: "licence",
+      choices: [
+        "MIT Licence", 
+        "Apache Licence", 
+        "GPL Licence", 
+      ]
     },
     {
       type: "input",
