@@ -34,23 +34,24 @@ function promptUser() {
     {
       type: "input",
       name: "tests",
-      message: "What testing did you do, are their any known issues with this version of the project"
+      message: "What testing did you do, are their any known issues with this version of the project",
 
     },
     {
-      type: "choices",
+      type: "options",
       name: "licence",
-      message: "What licence is used?"[
-      "MIT License",
-      "Apache License",
-      "GPL License",
-      "Other License"]
+      message: "What licence is used?",
       
+      value: "MIT License",
+      value: "Apache License",
+      value: "GPL License",
+      value: "Other License",
+    
     },
     {
       type: "input",
       name: "github user",
-      message: "What is your github user name?"
+      message: "What is your github user name?",
 
     },
     {
@@ -67,7 +68,7 @@ function promptUser() {
 
 function generateTXT(answers) {
   return `
-## ${answers.title}
+## ${answers.project}
 
   ${answers.description}
 
@@ -88,7 +89,7 @@ ${answers.tests}
 
 
 ## License
-${answers.choice}
+${answers.licence}
 // Badge
 
 ## Contact
@@ -102,11 +103,14 @@ promptUser()
   .then(function(answers) {
     const txt = generateTXT(answers);
 
-    return writeFileAsync("${answers.title} + readme.txt", txt);
+    console.log(answers.project);
+
+    return writeFileAsync((answers.project) + "readme.txt", txt);
   })
   .then(function() {
     console.log("Successfully wrote to readme.txt");
   })
   .catch(function(err) {
     console.log(err);
+    
   });
