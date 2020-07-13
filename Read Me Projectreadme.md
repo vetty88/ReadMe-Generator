@@ -17,10 +17,10 @@
   Generates Read Me Templates
 
 Screenshot of Project (VS Code): 
-![Screenshot](Screen.PNG?raw=true "Screenshot")
+![Screenshot](./screen.PNG?raw=true "Screenshot")
 
 Screenshot of Code (VS Code): 
-![Code](Code.PNG?raw=true "Screenshot")
+![Code](./code.PNG?raw=true "Screenshot")
 
 
 ## Installation
