@@ -12,9 +12,9 @@
 * [Contact](#contact)
 * [Creator & Acknowledgements](#acknowledgements)
 
-<h1> ## Vetty read </h1>
+<h1> ## Sample ReadMe  </h1>
 
-  read
+  Creates Readme files - this is a sample
 
   [![Project Name Screen Shot][project-screenshot]](https://example.com)
 
@@ -22,7 +22,7 @@
 ## Installation
 To get a local copy up and running follow these simple steps.
 
-read
+Created in VS Code, run in VS Code Terminal, uploaded to Github
 
 Prerequisites
 This is an example of how to list things you need to use the software and how to install them.
@@ -49,7 +49,7 @@ For more examples, please refer to the Documentation
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Regarding this project I respectfully make the following requests regarding contributions:
 
 
-read
+I would love you to take part
 
 -- Fork the Project -- 
 Create your Feature Branch 
@@ -63,22 +63,22 @@ Open a Pull Request
 ## Tests
 
 See the open issues for a list of proposed features (and known issues). Testing completed and any known issues include the following:
- read
+ Tested in VS Code terminal
 
 
 ## License
 
-MIT
+Apache
 
 ## Contact
 
-Your Name - vet
+Your Name - vetty88@gmail.com
 
 Project Link: https://github.com/github_username/repo
 
 ## Creator and Acknowledgements
 
-vett
+Vetty88
 
 --Acknowledgements
 * []()
