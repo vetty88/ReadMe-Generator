@@ -100,7 +100,7 @@ ${answers.user}`;
 
 promptUser()
   .then(function(answers) {
-    const md = generatemd(answers);
+    const md = generateMD(answers);
 
     console.log(answers.project);
 
