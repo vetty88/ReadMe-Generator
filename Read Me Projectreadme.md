@@ -16,7 +16,11 @@
 
   Generates Read Me Templates
 
-  [![Project Name Screen Shot][project-screenshot]](https://example.com)
+Screenshot of Project (VS Code): 
+![Screenshot](Screen.PNG?raw=true "Screenshot")
+
+Screenshot of Code (VS Code): 
+![Code](Code.PNG?raw=true "Screenshot")
 
 
 ## Installation
@@ -51,6 +55,7 @@ Contributions are what make the open source community such an amazing place to b
 
 You are welcome to contribute to this project
 
+Example of how to contribute: 
 -- Fork the Project -- 
 Create your Feature Branch 
   (git checkout -b feature/AmazingFeature)
@@ -69,18 +74,25 @@ See the open issues for a list of proposed features (and known issues). Testing 
 ## License
 
 MIT
+2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
 
 ## Contact
 
 Your Name - vetty88@gmail.com
 
-Project Link: https://github.com/github_username/repo
+Project Link: https://github.com/vetty88/readme-generator
 
 ## Creator and Acknowledgements
+Code Creator: Yvette Waller/ Vetty88 [GitHub]
+Instruction Author: Monash University/Trilogy Education.
 
-vetty88
+Resources utilised to edit the code: 
+* Monash University ReadMe and Slide Materials
+* Mozilla MDN WebDocs: https://developer.mozilla.org/en-US/ 
+* W3 Schools: https://www.w3schools.com/
+* Stack Overflow: https://www.stackoverflow.com/
 
---Acknowledgements
-* []()
-* []()
-* []()
+**Badges**
+
+![Made with love in Bairnsdale ](https://madewithlove.now.sh/au?heart=true&template=plastic&text=Bairnsdale+)
