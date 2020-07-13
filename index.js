@@ -65,7 +65,7 @@ function promptUser() {
   ]);
 };
 
-function generateTXT(answers) {
+function generateMD(answers) {
   return `
 ## ${answers.project}
 
@@ -100,14 +100,14 @@ ${answers.user}`;
 
 promptUser()
   .then(function(answers) {
-    const txt = generateTXT(answers);
+    const md = generatemd(answers);
 
     console.log(answers.project);
 
-    return writeFileAsync((answers.project) + "readme.txt", txt);
+    return writeFileAsync((answers.project) + "readme.md", md);
   })
   .then(function() {
-    console.log("Successfully wrote to readme.txt");
+    console.log("Successfully wrote to readme.md");
   })
   .catch(function(err) {
     console.log(err);
