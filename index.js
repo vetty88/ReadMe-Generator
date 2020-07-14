@@ -4,6 +4,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+
 function promptUser() {
   return inquirer.prompt([
     {
@@ -59,8 +60,6 @@ function promptUser() {
       message: "What is your email address?"
 
     }
-
-
 
   ]);
 };
@@ -128,12 +127,13 @@ Fork the Project
 
 See the open issues for a list of proposed features (and known issues). Testing completed and any known issues include the following:
  ${answers.tests}
+ 
 
 
 ## License
 
 ${answers.license}
-
+${answers.license.badge}
 ## Contact
 
 Your Name - ${answers.email}
@@ -152,18 +152,6 @@ ${answers.user}
 
 }
 
-// Generates license badge using user's answers from promptUser function
-function generateLicenseBadge(license) {
-  let badge = ""
-  if (license === "Apache") {
-    badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
- } else if (license === "GPL") {
-    badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-  } else if (license === "MIT") {
-    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-  }
-  return badge;
-}
 
 promptUser()
   .then(function(answers, license) {
@@ -171,7 +159,18 @@ promptUser()
      // Determine relevant license badge
      const licenseBadge = generateLicenseBadge(answers.license);
 
-    console.log(answers.project);
+    //  / Generates license badge using user's answers from promptUser function
+     function generateLicenseBadge(license) {
+       let badge = ""
+       if (license === "Apache") {
+         badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+      } else if (license === "GPL") {
+         badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+       } else if (license === "MIT") {
+         badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+       }
+       return badge;
+     }
 
     return writeFileAsync((answers.project) + "readme.md", md);
   })
