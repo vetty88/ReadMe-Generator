@@ -133,7 +133,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 ## License
 
 ${answers.license}
-${answers.license.badge}
+${answers.badge}
 ## Contact
 
 Your Name - ${answers.email}

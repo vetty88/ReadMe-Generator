@@ -12,24 +12,24 @@
 * [Contact](#contact)
 * [Creator & Acknowledgements](#acknowledgements)
 
-<h1> ## klj </h1>
+<h1> ## jklj </h1>
 
-  klj
+  jkljlk
 
-  [![klj Screen Shot][project-screenshot]](https://example.com)
+  [![jklj Screen Shot][project-screenshot]](https://example.com)
 
 
 ## Installation
 To get a local copy up and running follow these simple steps.
 
-ljlkj
+jlkj
 
 Prerequisites
 This is an example of how to list things you need to use the software and how to install them.
 
 Installation-
   Clone the repo
-    git clone https://github.com/kjlkj/klj.git
+    git clone https://github.com/jklj/jklj.git
   Install NPM packages
     npm install
 
@@ -45,7 +45,7 @@ For more examples, please refer to the Documentation
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Regarding this project I respectfully make the following requests regarding contributions:
 
 
-lkjklj
+jlkjlkj
 
 Fork the Project
   Create your Feature Branch 
@@ -59,23 +59,23 @@ Fork the Project
 ## Tests
 
 See the open issues for a list of proposed features (and known issues). Testing completed and any known issues include the following:
- jlkjlk
+ jklj
  
 
 
 ## License
 
-
+MIT
 undefined
 ## Contact
 
-Your Name - lkjlkj
+Your Name - jklj
 
-Project Link: https://github.com/kjlkj/klj
+Project Link: https://github.com/jklj/jklj
 
 ## Creator and Acknowledgements
 
-kjlkj
+jklj
 
 --Acknowledgements
 * []
