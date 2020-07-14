@@ -19,9 +19,6 @@
 Screenshot of Project (VS Code): 
 ![Screenshot](./screen.PNG?raw=true "Screenshot")
 
-Screenshot of Code (VS Code): 
-![Code](./code.PNG?raw=true "Screenshot")
-
 
 ## Installation
 To get a local copy up and running follow these simple steps.
