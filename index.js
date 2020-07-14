@@ -132,7 +132,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 ## License
 
-${answers.licenseBadge}
+${answers.badge}
 
 ## Contact
 
