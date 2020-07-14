@@ -84,7 +84,7 @@ function generateMD(answers, licenseBadge) {
 
   ${answers.description}
 
-  [![Project Name Screen Shot][project-screenshot]](https://example.com)
+  [![${answers.project} Screen Shot][project-screenshot]](https://example.com)
 
 
 ## Installation
@@ -95,15 +95,11 @@ ${answers.installation}
 Prerequisites
 This is an example of how to list things you need to use the software and how to install them.
 
-  npm
-  npm install npm@latest -g
-
--Installation-
-Clone the repo
-  git clone https://github.com/github_username/repo.git
-Install NPM packages
-  npm install
-
+Installation-
+  Clone the repo
+    git clone https://github.com/${answers.user}/${answers.project}.git
+  Install NPM packages
+    npm install
 
 
 ## Usage
@@ -119,14 +115,14 @@ Contributions are what make the open source community such an amazing place to b
 
 ${answers.contributing}
 
--- Fork the Project -- 
-Create your Feature Branch 
-  (git checkout -b feature/AmazingFeature)
-Commit your Changes 
-  (git commit -m 'Add some AmazingFeature')
-Push to the Branch 
-  (git push origin feature/AmazingFeature)
-Open a Pull Request
+Fork the Project
+  Create your Feature Branch 
+    (git checkout -b feature/AmazingFeature)
+  Commit your Changes 
+    (git commit -m 'Add some AmazingFeature')
+  Push to the Branch 
+    (git push origin feature/AmazingFeature)
+  Open a Pull Request
 
 ## Tests
 
@@ -136,22 +132,21 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 ## License
 
-${answers.license}
+${answers.licenseBadge}
 
 ## Contact
 
 Your Name - ${answers.email}
 
-Project Link: https://github.com/github_username/repo
+Project Link: https://github.com/${answers.user}/${answers.project}
 
 ## Creator and Acknowledgements
 
 ${answers.user}
 
 --Acknowledgements
-* []()
-* []()
-* []()
+* []
+* []
 `;
 
 
