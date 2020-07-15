@@ -132,7 +132,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 ## License
 
-${answers.license}
+${licenseBadge}
 
 ## Contact
 
@@ -162,11 +162,11 @@ promptUser()
     //  / Generates license badge using user's answers from promptUser function
      function generateLicenseBadge(license) {
        let badge = ""
-       if (license === "Apache") {
+       if (license == "Apache") {
          badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-      } else if (license === "GPL") {
+      } else if (license == "GPL") {
          badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-       } else if (license === "MIT") {
+       } else if (license == "MIT") {
          badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
        }
        return badge;
