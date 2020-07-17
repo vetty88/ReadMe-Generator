@@ -6,66 +6,65 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 
 function promptUser() {
-  return inquirer.prompt([
-    {
-      type: "input",
-      name: "project",
-      message: "What is the title of your project??"
-    },
-    {
-      type: "input",
-      name: "description",
-      message: "What does your project do? i.e: how would you describe it?"
-    },
-    {
-      type: "input",
-      name: "installation",
-      message: "how do you install your project? what programs did you use to create and run this project?"
-    },
-    {
-      type: "input",
-      name: "usage ",
-      message: "What is your project used for? what is an ideal application?"
-    },
-    {
-      type: "input",
-      name: "contributing",
-      message: "What are your instructions for gitHub users who would like to pull and/or make changes to this project?"
-    },
-    {
-      type: "input",
-      name: "tests",
-      message: "What testing did you do, are their any known issues with this version of the project",
+    return inquirer.prompt([{
+            type: "input",
+            name: "project",
+            message: "What is the title of your project??"
+        },
+        {
+            type: "input",
+            name: "description",
+            message: "What does your project do? i.e: how would you describe it?"
+        },
+        {
+            type: "input",
+            name: "installation",
+            message: "how do you install your project? what programs did you use to create and run this project?"
+        },
+        {
+            type: "input",
+            name: "usage ",
+            message: "What is your project used for? what is an ideal application?"
+        },
+        {
+            type: "input",
+            name: "contributing",
+            message: "What are your instructions for gitHub users who would like to pull and/or make changes to this project?"
+        },
+        {
+            type: "input",
+            name: "tests",
+            message: "What testing did you do, are their any known issues with this version of the project",
 
-    },
-    {
-      type: "checkbox",
-      message: "What license is used?",
-      name: "license",
-      choices: [
-        "MIT", 
-        "Apache", 
-        "GPL", 
-      ]
-    },
-    {
-      type: "input",
-      name: "user",
-      message: "What is your github user name?",
+        },
+        {
+            type: "checkbox",
+            message: "What license is used?",
+            name: "license",
+            choices: [
+                "MIT",
+                "Apache",
+                "GPL",
+            ]
+        },
+        {
+            type: "input",
+            name: "user",
+            message: "What is your github user name?",
 
-    },
-    {
-      type: "input",
-      name: "email",
-      message: "What is your email address?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email address?"
 
-    }
+        }
 
-  ]);
+    ]);
 };
 
 function generateMD(answers, licenseBadge) {
-  return `
+    return `
 
  <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -99,6 +98,11 @@ Installation-
     git clone https://github.com/${answers.user}/${answers.project}.git
   Install NPM packages
     npm install
+    npm inquirer
+    npm audit fix
+  Then open index.js file in console log and run
+    node index.js
+  You will be taken through a series of questions (user prompts) which will then lead to the generation of your new readme.md file!
 
 
 ## Usage
@@ -128,8 +132,6 @@ Fork the Project
 See the open issues for a list of proposed features (and known issues). Testing completed and any known issues include the following:
  ${answers.tests}
  
-
-
 ## License
 
 ${licenseBadge}
@@ -154,36 +156,29 @@ ${answers.user}
 
 
 promptUser()
-  .then(function(answers, license) {
-    const md = generateMD(answers);
-     // Determine relevant license badge
-     const licenseBadge = generateLicenseBadge(answers.license);
+    .then(function(answers, license) {
+        // Determine relevant license badge
+        const licenseBadge = generateLicenseBadge(answers.license);
+        const md = generateMD(answers, licenseBadge);
+          return writeFileAsync((answers.project) + "readme.md", md);
+    })
+    .then(function() {
+        console.log("Successfully wrote to readme.md");
+    })
+    .catch(function(err) {
+        console.log(err);
 
-    //  / Generates license badge using user's answers from promptUser function
-     function generateLicenseBadge(license) {
-       let badge = ""
-       if (license == "Apache") {
-         badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-      } else if (license == "GPL") {
-         badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
-       } else if (license == "MIT") {
-         badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-       }
-       return badge;
-     }
+    });
 
-    return writeFileAsync((answers.project) + "readme.md", md);
-  })
-  .then(function() {
-    console.log("Successfully wrote to readme.md");
-  })
-  .catch(function(err) {
-    console.log(err);
-    
-  });
-
-
-
-
-
-
+//  / Generates license badge using user's answers from promptUser function
+function generateLicenseBadge(license) {
+    let badge = ""
+    if (license == "Apache") {
+        badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if (license == "GPL") {
+        badge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    } else if (license == "MIT") {
+        badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    }
+    return badge;
+}

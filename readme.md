@@ -3,14 +3,14 @@
  <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#answers.project)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [License](#license)
-* [Contact](#contact)
-* [Creator & Acknowledgements](#acknowledgements)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Contact](#contact)
+- [Creator and Acknowledgements](#creator-and-acknowledgements)
 
 <h1> ## Read Me Project </h1>
 
@@ -70,7 +70,7 @@ See the open issues for a list of proposed features (and known issues). Testing 
 
 ## License
 
-MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
 
 
