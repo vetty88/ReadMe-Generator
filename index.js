@@ -151,12 +151,17 @@ Project Link: https://github.com/${answers.user}/${answers.project}
 
 ## Creator and Acknowledgements
 
-${answers.user}
+Github User: ${answers.user}
 
---Acknowledgements
-* []
-* []
-`;
+
+Yvette Waller 2020
+Credits Codebase Author: Monash University/Trilogy Education.
+
+Resources utilised to edit the code:
+
+Monash University ReadMe and Slide Materials Mozilla MDN WebDocs: https://developer.mozilla.org/en-US/ W3 Schools: https://www.w3schools.com/ Stack Overflow: https://www.stackoverflow.com/
+
+;
 
 
 }
