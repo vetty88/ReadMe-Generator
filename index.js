@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
@@ -61,7 +63,7 @@ function promptUser() {
         }
 
     ]);
-};
+}
 
 function generateMD(answers, licenseBadge) {
     return `
@@ -82,7 +84,12 @@ function generateMD(answers, licenseBadge) {
 
   ${answers.description}
 
-  [![${answers.project} Screen Shot][project-screenshot]](https://example.com)
+  Screenshot of Project (Google Chrome): 
+  ![Screenshot](./Screen.PNG?raw=true)
+
+  Repo: https://github.com/${answers.user}/${answers.project}
+
+Video of app in action, see file: https://github.com/vetty88/Note-Taker/blob/master/Note%20Taker.mp4
 
 
 ## Installation
@@ -172,7 +179,7 @@ promptUser()
 
 //  / Generates license badge using user's answers from promptUser function
 function generateLicenseBadge(license) {
-    let badge = ""
+    let badge = "";
     if (license == "Apache") {
         badge = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
     } else if (license == "GPL") {
